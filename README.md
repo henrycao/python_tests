@@ -6,7 +6,11 @@ That means there might be a lot of ideas here
 
 * one md5 reverse program
 
+* use GeoIP.dat to search location for ip
+
 ###To do
+
+* md5 project
 
 1. create md5 source by python
 
