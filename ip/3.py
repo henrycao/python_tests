@@ -20,5 +20,5 @@ for ip in file:
 #	print ip
 	conn.request("GET","/iplookup/iplookup.php?format=jsi&ip=",ip)
 	r1 = conn.getresponse()
-	print r1.read()
+	#print r1.read()
 	conn.close()
