@@ -4,6 +4,8 @@ readme is [here](https://github.com/appliedsec/pygeoip)
 
 Geoip.dat is from Maxmind
 
+Sina ip api url is `http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=jsi&ip=$ip`
+
 ## Quick Documentation ##
 
 Create your GeoIP instance with appropriate access flag. `STANDARD` reads data from disk when needed, `MEMORY_CACHE` loads database into memory on instantiation and `MMAP_CACHE` loads database into memory using mmap.

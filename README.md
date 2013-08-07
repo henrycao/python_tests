@@ -6,7 +6,24 @@ That means there might be a lot of ideas here
 
 * one md5 reverse program
 
-* use GeoIP.dat to search location for ip
+* search location for ip
+
+1.1 use maxmind Geoip.dat to search ip location
+
+1.2 use sina ip api to search ip location
+
+###module included
+
+in order to install python module just use easy_install moudle_name
+
+dependencies:
+
+	yum install python-devel python-setuptools
+
+* pygeoip
+* httplib
+* hashlib
+* simplejson 
 
 ###To do
 

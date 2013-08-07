@@ -2,10 +2,11 @@
 import httplib
 
 def loop_request():
-	file=open("./url","r")
-	for url in file:
+	file=open("./ip","r")
+	for ip in file:
+		ip = ip.rstrip()
+		url="/iplookup/iplookup.php?format=jsi&ip=%s " % (ip)	
 		conn = httplib.HTTPConnection("int.dpool.sina.com.cn")
-		conn.set_debuglevel(3)
 		conn.connect()
 		conn.request("GET",url)
 		r1 = conn.getresponse()
@@ -13,13 +14,13 @@ def loop_request():
 		conn.close()
 
 def single_request():
+	url="/iplookup/iplookup.php?format=jsi&ip=58.247.192.223"
 	conn = httplib.HTTPConnection("int.dpool.sina.com.cn")
-	conn.set_debuglevel(3)
 	conn.connect()
-	conn.request("GET","/iplookup/iplookup.php?format=jsi&ip=58.247.192.223")
+	conn.request("GET",url)
 	r1 = conn.getresponse()
 	print r1.read()
 	conn.close()
 	
-#loop_request()
-single_request()
+loop_request()
+#single_request()
