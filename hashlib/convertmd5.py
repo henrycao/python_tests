@@ -30,13 +30,11 @@ def calc_md5(string):
 	m.update(string)
 	return m.hexdigest()	
 
-def write_file(string):
-	file_obj = open('./md5_result_1','a')
-	file_obj.write(string + " " + calc_md5(string) + "\n")
-	file_obj.close()
-
+file_obj = open('./md5_result','a')
+base = 94
+len = 6
 for num in range(0,100000):
 	converted_list = []
-	base = 94
-	len = 6
-	write_file(format_print(num,base,len))	
+	string = format_print(num,base,len)
+	file_obj.write(string + " " + calc_md5(string) + "\n")
+file_obj.close()
