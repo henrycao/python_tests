@@ -23,7 +23,7 @@ def format_print(num,base,len):
             item = dic[item]
         item = str(item)
         result += item
-    return result.zfill(len)
+    return result.rjust(len,'0')
 
 def calc_md5(string):
 	m = md5()
